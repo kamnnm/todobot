@@ -1,0 +1,41 @@
+en:
+  greeting_message: 'I`m your the todobot, I can do your to do list.'
+  help_message: |
+    Create your to do list use command: /create
+    See your all lists use command: /lists
+    See your current list use command: /list
+    Create your task use command: /todo
+
+  undefined_message: 'You send unknown command.'
+  undefined_command_type: 'I can`t identify your type of message.'
+  list:
+    create: 'Give a name to your list.'
+    created: |
+      "%{list}" list created.
+      Create your task use command: /todo
+    not_exists: |
+      There are no any lists in this chat.
+      Create your to do list use command: /create
+    not_found: 'A list with this number hasn`t found.'
+  task:
+    create: 'Give a name to your task.'
+    created: '"%{task}" successfully created.'
+    finished: '"%{task}" successfully completed.'
+    not_exists: |
+      There are no any tasks in this list.
+      Create your task use command: /todo
+    not_found: 'A task with this number hasn`t found.'
+
+  activerecord:
+    errors:
+      models:
+        todo_bot/task:
+          attributes:
+            name:
+              too_long: 'You used too much symbols.'
+          too_long: 'You used too much symbols in your tasks.'
+        todo_bot/list:
+          attributes:
+            name:
+              too_long: 'You used too much symbols.'
+          too_long: 'You used too much symbols in your lists.'

@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'bundler/setup'
+require 'pry'
+require 'telegram/bot'
+require 'todobot'
+require 'todobot/app_configurator'
+
+TodoBot::AppConfigurator.configure
+
+Pry.start

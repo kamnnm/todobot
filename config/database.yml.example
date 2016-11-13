@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  username: postgres
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  host: db
+
+development:
+  <<: *default
+  database: todobot_development
+
+test:
+  <<: *default
+  database: todobot_test

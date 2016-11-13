@@ -1,0 +1,17 @@
+version: '2'
+services:
+  db:
+    image: postgres
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+  app:
+    build: .
+    command: bin/bot
+    volumes:
+      - .:/todobot
+    depends_on:
+      - db
+
+volumes:
+  pg-data:
+    driver: local
