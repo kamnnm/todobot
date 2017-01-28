@@ -9,7 +9,7 @@ module TodoBot
 
         chat.show_lists!
 
-        TodoBot::CollectionToMessagePresenter.new(chat.lists).execute
+        TodoBot::CollectionToMessagePresenter.new(chat.lists.ordered).execute
       end
     end
   end
