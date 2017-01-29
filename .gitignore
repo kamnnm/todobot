@@ -6,3 +6,5 @@ db/*.sqlite3
 
 .byebug_history
 .ruby-version
+
+deploy/
